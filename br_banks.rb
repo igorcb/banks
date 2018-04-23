@@ -10,7 +10,7 @@ module BRBank
 
   def self.populate
     banks.each do |bank|
-      bank = Bank.create_with(codigo: bank["codigo"], nome: bank["nome"]).find_or_create_by(nome: bank["nome"])
+      bank = Bank.create_with(codigo: bank["code"], nome: bank["name"]).find_or_create_by(nome: bank["name"])
     end
   end
 end
